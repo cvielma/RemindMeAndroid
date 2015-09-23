@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddTaskActivity" >
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10" 
+        android:inputType="text"
+        android:hint="@string/task_title">
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:minHeight="0dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/title"
+        android:layout_above="@+id/datepicker"
+        android:ems="10"
+        android:hint="@string/task_description"
+        android:inputType="textMultiLine"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView 
+        android:id="@+id/datepicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/timepicker"
+        android:hint="@string/due_date"
+        android:layout_above="@+id/reminder" 
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+        />
+    
+    <TextView
+        android:id="@+id/timepicker"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reminder"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:hint="@string/due_time" 
+        style="@android:style/Widget.DeviceDefault.Light.Spinner"
+        />
+    <CheckBox
+        android:id="@+id/reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/set_reminder"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="20dp"
+        />
+
+</RelativeLayout>
